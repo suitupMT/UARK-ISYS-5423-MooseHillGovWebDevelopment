@@ -4,6 +4,12 @@
 body {
   font-size: 14px;
 }
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: white;
+}
 .v117_9 {
   width: 100%;
   height: 650px;
@@ -32,7 +38,7 @@ body {
 /* bottom text */
 .v119_3 {
   width: 598px;
-  color: rgba(255,255,255,255);
+  color: rgba(255, 255, 255, 255);
   position: absolute;
   top: 500px;
   left: 10px;
@@ -45,7 +51,7 @@ body {
 /*bottom text pt2*/
 .v119_4 {
   width: 598px;
-  color: rgba(105,155,247,1););
+  color: rgba(105, 155, 247, 1);
   position: absolute;
   top: 500px;
   left: 280px;
@@ -58,7 +64,7 @@ body {
 /*Services Text*/
 .v123_2 {
   width: 160px;
-  color: rgba(55,69,92,1);
+  color: rgba(55, 69, 92, 1);
   position: absolute;
   top: 43px;
   left: 345px;
@@ -70,7 +76,7 @@ body {
 }
 .v123_3 {
   width: 208px;
-  color: rgba(55,69,92,1);
+  color: rgba(55, 69, 92, 1);
   position: absolute;
   top: 43px;
   left: 463px;
@@ -82,7 +88,7 @@ body {
 }
 .v123_4 {
   width: 145px;
-  color: rgba(55,69,92,1);
+  color: rgba(55, 69, 92, 1);
   position: absolute;
   top: 42px;
   left: 632px;
@@ -95,7 +101,7 @@ body {
 /*Covid-19 text*/
 .v123_5 {
   width: 168px;
-  color: rgba(185,66,66,1);
+  color: rgba(185, 66, 66, 1);
   position: absolute;
   top: 46px;
   left: 767px;
@@ -110,7 +116,7 @@ body {
 .v126_2 {
   width: 132px;
   height: 44px;
-  background: rgba(105,155,247,1);
+  background: rgba(105, 155, 247, 1);
   opacity: 1;
   position: absolute;
   top: 36px;
@@ -120,7 +126,7 @@ body {
 /*login text*/
 .v126_3 {
   width: 89px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 45px;
   left: 976px;
@@ -129,18 +135,18 @@ body {
   font-size: 24px;
   opacity: 1;
   text-align: center;
-
+  text-decoration: none;
 }
 /*white search box*/
 .v126_13 {
   width: 587px;
   height: 66px;
-  background: rgba(255,255,255,0.3499999940395355);
+  background: rgba(255, 255, 255, 0.3499999940395355);
   opacity: 1;
   position: absolute;
   top: 265px;
   left: 316px;
-  border: 4px solid rgba(255,255,255,1);
+  border: 4px solid rgba(255, 255, 255, 1);
 }
 .name {
   color: #fff;
@@ -148,7 +154,7 @@ body {
 /*text in search box*/
 .v126_15 {
   width: 444px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 280px;
   left: 387px;
@@ -177,13 +183,11 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(105,155,247,1);
+  background-color: rgba(105, 155, 247, 1);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border: 0.5px solid rgba(55,69,92,1);
-  
- 
+  border: 0.5px solid rgba(55, 69, 92, 1);
 }
 
 /* Links inside the dropdown */
@@ -192,18 +196,23 @@ body {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  border: 0.5px solid rgba(55,69,92,1);
-
+  border: 0.5px solid rgba(55, 69, 92, 1);
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3D73D7;}
+.dropdown:hover .dropbtn {
+  background-color: #3d73d7;
+}
 
 /*covid link */
 .dropbtn2 {
@@ -215,6 +224,6 @@ body {
 }
 
 /*links style to prevent underlining*/
-.links{
+.links {
   text-decoration: none;
 }

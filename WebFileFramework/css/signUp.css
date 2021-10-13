@@ -49,6 +49,7 @@ body {
   opacity: 1;
   text-align: left;
 }
+/*login logo link*/
 .v168_44 {
   width: 442px;
   height: 160px;
@@ -124,10 +125,30 @@ body {
   left: 968px;
   overflow: hidden;
 }
+/*Login Form Register CSS */
+.v168_99 {
+  color: rgba(60, 114, 214, 1);
+  position: absolute;
+  top: 235px;
+  left: 620px;
+  font-family: Roboto;
+  font-weight: Medium;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+  text-decoration: none;
+}
+/*solves link purple issue*/
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: rgba(60, 114, 214, 1);
+}
 .v168_52 {
   width: 656px;
   height: 75px;
-
+  color: black;
   opacity: 1;
   position: absolute;
   top: 386px;
@@ -191,10 +212,19 @@ body {
   opacity: 1;
   text-align: left;
 }
+
+/*Login Button*/
 .v168_58 {
   position: absolute;
-  top: 495px;
-  left: 1001px;
+  top: 195px;
+  left: 970px;
+  overflow: hidden;
+}
+/*SignUp Button*/
+.v168_98 {
+  position: absolute;
+  top: 475px;
+  left: 1067px;
   overflow: hidden;
 }
 .v168_59 {

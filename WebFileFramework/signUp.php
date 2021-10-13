@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +15,7 @@
     <div class="v168_4">
         <div class="v168_28"></div>
         <div class="v168_29"><span class="v168_30">Create your Moose Profile</span></div>
-        <div class="v168_44"></div>
+        <div class="v168_44"><a href="main.php" style="text-decoration:none;"><img alt="broken" src="images/v168_44.png" width=442px height=160px></a></div>
 
         <section class="singup-form">
 
@@ -47,7 +50,7 @@
                 <div class="v168_53">
                     <input type="text" name="CCtype" placeholder="Credit Type MC/VS...">
                 </div>
-                <div class="v168_58">
+                <div class="v168_98">
                     <button type="submit" name="submit">Submit</button>
                 </div>
             </form>

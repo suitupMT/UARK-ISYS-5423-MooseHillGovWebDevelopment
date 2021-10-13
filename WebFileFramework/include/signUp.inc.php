@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //connects to the database
 //pull fields from the form into php variables
 if (isset($_POST['submit'])) {
