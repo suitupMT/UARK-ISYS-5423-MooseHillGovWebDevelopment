@@ -1,5 +1,5 @@
 <?php session_Start();
-
+//This controls the button changes per login conditions;
 ?>
 
 <!DOCTYPE html>
