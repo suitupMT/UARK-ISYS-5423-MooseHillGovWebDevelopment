@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .v2_25 {
+    width: 100%;
+    height: 800px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+    /*logo*/
+  .logo {
+    width: 284px;
+    height: 88px;
+    background: url("../images/v118_7.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 31px;
+    left: 32px;
+    overflow: hidden;
+  }
+  .v2_background {
+    width: 100%;
+    height: 100%;
+    background: url("../images/citycouncilbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v2_3 {
+    width: 328px;
+    height: 114px;
+    background: url("../images/v2_3.png");
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    left: 2px;
+  }
+  .v2_40 {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 210px;
+    left: 72px;
+    font-size: 35px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    opacity: 1;
+    text-align: left;
+  }
+  .heading {
+    width: 95%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+    text-align: left;
+  }
+  .image {
+    width: 300px;
+    height: 450px;
+    background: url("../images/ward2pos2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 270px;
+    left: 70px;
+    overflow: hidden;
+  }
+  .maintext {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 265px;
+    left: 30%;
+    opacity: 1;
+    font-size: 25px;
+    font-weight:900;
+    font-family: 'Roboto';
+    text-align: left;
+  } 
+  .subtext {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 305px;
+    left: 30%;
+    opacity: 1;
+    font-size: 19px;
+    font-family: 'Roboto';
+    text-align: left;
+  } 
+  .maintext2 {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 420px;
+    left: 30%;
+    opacity: 1;
+    font-size: 22px;
+    font-weight:600;
+    font-family: 'Roboto';
+    text-align: left;
+  } 
+  .subtext2 {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 450px;
+    left: 30%;
+    opacity: 1;
+    font-size: 19px;
+    font-family: 'Roboto';
+    text-align: left;
+  } 
+  /* .maintext3{
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 520px;
+    left: 30%;
+    opacity: 1;
+    font-size: 22px;
+    font-weight:600;
+    font-family: 'Roboto';
+    text-align: left;
+  } 
+  .subtext3 {
+    width: 100%;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 550px;
+    left: 30%;
+    opacity: 1;
+    font-size: 19px;
+    font-family: 'Roboto';
+    text-align: left;
+  }  */
+  
+  .v18_3 {
+    width: 360px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 55px;
+    /* left: 830px; */
+    right: 1%;
+    font-family: Roboto;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  
