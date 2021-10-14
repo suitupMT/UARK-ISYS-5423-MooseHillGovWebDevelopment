@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['E-mail'];
     $pwd = $_POST['password'];
 
-    $sql = "SELECT * FROM Users WHERE email = '$email'";
+    $sql = "SELECT * FROM Users Join PaymentInfo On Users.userId = PaymentInfo.userId WHERE email = '$email'";
     //print "SQL: $sql\n\n </br>";
 
     //basic store of query -- doesn't work with row counting
@@ -62,6 +62,12 @@ if (isset($_POST['submit'])) {
         $_SESSION["email"] = $queryArray[4];
         $_SESSION["fName"] = $queryArray[2];
         $_SESSION["lName"] = $queryArray[3];
+        $_SESSION["city"] = $queryArray[5];
+        $_SESSION["address"] = $queryArray[7];
+        $_SESSION["CCNum"] = $queryArray[10];
+        $_SESSION["CCType"] = $queryArray[11];
+
+
         header("location: ../main.php");
         exit();
     }
