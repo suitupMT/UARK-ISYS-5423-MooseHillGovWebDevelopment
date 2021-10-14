@@ -1,3 +1,10 @@
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="../css/RedirectMessages.css" rel="stylesheet" />
+    <title>SignUp</title>
+
+</head>
 <?php
 session_start();
 //connects to the database
@@ -25,8 +32,11 @@ if (isset($_POST['submit'])) {
     );
     if (sqlsrv_num_rows($result) > 0) {
         //checking to see if query is empty
-        echo $fname . 'Your email account already exists<br />';
-        echo 'Redirecting to Login Page.... Please Log In.';
+
+        echo $fname . " " . $lname . '<div class="my-notify-warning">Your email account already exists<br/> 
+        Redirecting to Login Page.... Please Log In. </div>';
+        //echo $fname . 'Your email account already exists<br />';
+        //echo 'Redirecting to Login Page.... Please Log In.';
         header("refresh:3; url=../login.php");
         exit();
     }
