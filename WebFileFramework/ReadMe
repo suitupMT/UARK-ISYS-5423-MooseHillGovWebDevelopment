@@ -2,3 +2,6 @@ This is where the full code for live upload goes, once approved this entire file
 
 All HTML pages will go outside the folders- only the landing page may be renamed to index before uploading this structure
 all other pages must have unique names. 
+
+
+MAIN.HTML is a placeholder -- ALL PAGES SHOULD POINT HOME TO MAIN.PHP
