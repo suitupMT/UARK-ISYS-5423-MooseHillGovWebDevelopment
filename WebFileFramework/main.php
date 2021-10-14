@@ -69,7 +69,7 @@
             <div>
                 <?php
 
-                if ($_SESSION["initial"] != "") {
+                if ($_SESSION["initial"] == "") {
                     echo '<a href="login.php" style="text-decoration:none; color:white">Account</a>';
                 } else {
                     echo '<a href="login.php" style="text-decoration:none; color:white">Log In</a>';
