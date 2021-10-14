@@ -1,5 +1,6 @@
 <?php session_Start();
 //This controls the button changes per login conditions;
+$_SESSION['initial'];
 ?>
 
 <!DOCTYPE html>
@@ -69,15 +70,15 @@
             <div>
                 <?php
 
-                if ($_SESSION["initial"] == "") {
-                    echo '<a href="login.php" style="text-decoration:none; color:white">Account</a>';
+                if (empty($_SESSION["initial"])) {
+                    echo '<a href="login.php" style="text-decoration:none; color:white">Log In</a>';
                 } else {
                     echo '<div class="dropdown">
                 <button class="dropbtn3">Account</button>
                 <div class="dropdown-content">
                     <a href="#"><strong>Profile</strong></a>
                     <a href="#"><strong>PaymentInfo</strong></a>
-                    <a href="#"><strong>Log Out</strong></a>
+                    <a href="include/logout.inc.php"><strong>Log Out</strong></a>
                 </div>
             </div>';
                     //echo '<a href="login.php" style="text-decoration:none; color:white">Log In</a>';
