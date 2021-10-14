@@ -1,6 +1,8 @@
 <?php session_Start();
 //This controls the button changes per login conditions;
+error_reporting(E_ALL ^ E_WARNING);
 $_SESSION['initial'];
+
 ?>
 
 <!DOCTYPE html>
