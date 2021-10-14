@@ -15,6 +15,24 @@ if (isset($_POST['submit'])) {
     $cc = $_POST['CC#'];
     $cctype = $_POST['CCtype'];
 
+    //Need to check if email already exists;
+    $sql = "SELECT * FROM Users WHERE email = '$email'";
+    $result = sqlsrv_query(
+        $conn,
+        $sql,
+        array(),
+        array("Scrollable" => 'static')
+    );
+    if (sqlsrv_num_rows($result) > 0) {
+        //checking to see if query is empty
+        echo $fname . 'Your email account already exists<br />';
+        echo 'Redirecting to Login Page.... Please Log In.';
+        header("refresh:3; url=../login.php");
+        exit();
+    }
+
+    //End of check if email exists;
+
     // Input into staff database
     $tsql = "INSERT INTO Users(passwd, firstName, lastName, email, city, state, address)  
     VALUES (?,?,?,?,?,?,?)";
@@ -33,5 +51,5 @@ if (isset($_POST['submit'])) {
     sqlsrv_close($conn);
     echo $fname . 'Your account has been created<br />';
     echo 'Redirecting to Login Page.... Please Log In.';
-    header("refresh:5; url=../login.php");
+    header("refresh:3; url=../login.php");
 }
