@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $params = array($password, $fname, $lname, $email, $city, $state, $address);
     $stmt = sqlsrv_query($conn, $tsql, $params);
     if ($stmt) {
-        echo "Row successfully inserted.\n";
+        //echo "Row successfully inserted.\n";
     } else {
         echo "Row insertion failed.\n";
         die(print_r(sqlsrv_errors(), true));
@@ -32,4 +32,6 @@ if (isset($_POST['submit'])) {
     sqlsrv_free_stmt($stmt);
     sqlsrv_close($conn);
     echo $fname . 'Your account has been created<br />';
+    echo 'Redirecting to Login Page.... Please Log In.';
+    header("refresh:5; url=../login.php");
 }
