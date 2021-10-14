@@ -222,6 +222,13 @@ a:focus {
   font-size: 24px;
   border: none;
 }
+.dropbtn3 {
+  background-color: transparent;
+  color: white;
+  padding: 0px;
+  font-size: 24px;
+  border: none;
+}
 
 /*links style to prevent underlining*/
 .links {
