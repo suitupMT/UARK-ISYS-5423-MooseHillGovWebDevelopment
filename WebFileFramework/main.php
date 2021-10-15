@@ -73,7 +73,7 @@ $_SESSION['initial'];
                 <?php
 
                 if (empty($_SESSION["initial"])) {
-                    echo '<a href="login.php" style="text-decoration:none; color:white">Log In</a>';
+                    echo '<a href="newLogin.php" style="text-decoration:none; color:white">Log In</a>';
                 } else {
                     echo '<div class="dropdown">
                 <button class="dropbtn3">Account</button>
