@@ -138,13 +138,14 @@ body {
   text-align: left;
   text-decoration: none;
 }
-/*solves link purple issue*/
+/*solves link purple issue ------------------------------------------*/
 a:visited,
 a:hover,
 a:focus {
   text-decoration: none;
   color: rgba(60, 114, 214, 1);
 }
+/*---------------------------------------------------------------- */
 .v168_52 {
   width: 656px;
   height: 75px;

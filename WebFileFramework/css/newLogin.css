@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+/* Links issue fix ----------------------*/
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: rgba(60, 114, 214, 1);
+}
+/*-----------------------*/
+.v180_36 {
+  width: 100%;
+  height: 700px;
+  background: rgba(41, 50, 65, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v180_55 {
+  width: 603px;
+  height: 700px;
+  background: rgba(105, 155, 247, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.v22_9 {
+  width: 118px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 16px;
+  left: 679px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.v22_11 {
+  width: 262px;
+  height: 70px;
+  background: rgba(105, 155, 247, 1);
+  opacity: 1;
+  position: absolute;
+  top: 448px;
+  left: 820px;
+  border: 1px solid rgba(79, 84, 94, 1);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+.v22_12 {
+  width: 258px;
+  color: rgba(37, 37, 37, 1);
+  position: absolute;
+  top: 448px;
+  left: 820px;
+  font-family: Roboto;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_13 {
+  width: 262px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 531px;
+  left: 820px;
+  font-size: 18px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_14 {
+  width: 129px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 592px;
+  left: 890px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v22_17 {
+  width: 565px;
+  height: 79px;
+  background: rgba(0, 0, 0, 1);
+  opacity: 1;
+  position: absolute;
+  top: 103px;
+  left: 679px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+.v22_18 {
+  width: 135px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 103px;
+  left: 679px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.v22_24 {
+  width: 565px;
+  height: 79px;
+  background: rgba(54, 55, 59, 1);
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 679px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+.v22_25 {
+  width: 135px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 235px;
+  left: 704px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.v22_30 {
+  width: 27px;
+  height: 27px;
+  background: rgba(54, 55, 59, 1);
+  border-color: white;
+  opacity: 1;
+  position: absolute;
+  top: 355px;
+  left: 679px;
+}
+.v22_31 {
+  width: 132px;
+  color: rgba(255, 255, 255, 0.699999988079071);
+  position: absolute;
+  top: 359px;
+  left: 710px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_32 {
+  width: 565px;
+  height: 0px;
+  background: rgba(79, 84, 94, 1);
+  opacity: 1;
+  position: absolute;
+  top: 649px;
+  left: 956px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+.v180_94 {
+  width: 389px;
+  height: 120px;
+  background: url("../images/v180_94.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 33px;
+  left: 35px;
+  overflow: hidden;
+}
+.v182_9 {
+  width: 526px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 460px;
+  left: 195px;
+  font-family: Roboto;
+  font-weight: Medium;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+/* Its own forms because color ----------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+/* Full-width input fields */
+* {
+  box-sizing: border-box;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 79px;
+  padding: 15px;
+  margin: 0px 0 22px 0;
+  display: inline-block;
+  border: 1px solid black;
+  background: rgba(54, 55, 59, 1);
+  color: #f1f1f1;
+}
+
+.rounded-input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: rgb(36, 8, 87);
+  outline: none;
+  color: #f1f1f1;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  color: white;
+
+  font-size: large;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-radius: 25px;
+  padding: 20px;
+  width: 262px;
+  height: 70px;
+  background: rgba(105, 155, 247, 1);
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+/*CHECKBOX */
+.checkbox-round {
+  width: 30px;
+  height: 30px;
+  background: rgba(105, 155, 247, 1);
+  position: absolute;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: none;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.checkbox-round:checked {
+  background-color: gray;
+}
