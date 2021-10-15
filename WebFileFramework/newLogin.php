@@ -43,7 +43,10 @@ session_start();
                 Remember me
             </div>
             <div class="v22_32"></div>
-            <div class="v180_94"></div>
+            <!-- logo -->
+            <a href="main.php" style="text-decoration:none;">
+                <div class="v180_94"></div>
+            </a>
 
 
 
