@@ -17,11 +17,11 @@ body {
 /*logo*/
 .logo {
   width: 284px;
-  height: 88px;
+  height: 100px;
   z-index: 9999;
   opacity: 1;
   position: absolute;
-  top: 31px;
+  top: 25px;
   left: 32px;
   overflow: hidden;
 }

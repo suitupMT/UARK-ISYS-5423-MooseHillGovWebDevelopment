@@ -17,14 +17,14 @@
     /*logo*/
   .logo {
     width: 284px;
-    height: 88px;
+    height: 100px;
     background: url("../images/v118_7.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 31px;
+    top: 25px;
     left: 32px;
     overflow: hidden;
   }
