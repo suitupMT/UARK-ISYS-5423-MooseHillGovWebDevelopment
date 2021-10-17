@@ -3,7 +3,6 @@
 
 session_start();
 
-include "dbConnectWindowsAuth.php";
 function emptyInputSignup($fname, $lname, $email, $pwd)
 {
     $result;

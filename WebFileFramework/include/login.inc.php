@@ -4,12 +4,28 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 */
-include "dbConnectWindowsAuth.php";
+
 
 if (isset($_POST['submit'])) {
 
+    include "dbConnectWindowsAuth.php";
+
     $email = $_POST['E-mail'];
     $pwd = $_POST['password'];
+
+    //Error Checking Form Entry
+
+    //If password empty
+    if (empty($email)) {
+        header("Location: ../newLogin.php?login=emptyEmail&password=$pwd");
+        exit();
+    } elseif (empty($pwd)) {
+        header("Location: ../newLogin.php?login=emptyPwd&E-mail=$email");
+        exit();
+    }
+
+
+
 
     $sql = "SELECT * FROM Users Join PaymentInfo On Users.userId = PaymentInfo.userId WHERE email = '$email' or username = '$email'";
     //print "SQL: $sql\n\n </br>";
