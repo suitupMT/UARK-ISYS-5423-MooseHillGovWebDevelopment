@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['E-mail'];
     $pwd = $_POST['password'];
 
-    $sql = "SELECT * FROM Users Join PaymentInfo On Users.userId = PaymentInfo.userId WHERE email = '$email'";
+    $sql = "SELECT * FROM Users Join PaymentInfo On Users.userId = PaymentInfo.userId WHERE email = '$email' or username = '$email'";
     //print "SQL: $sql\n\n </br>";
 
     //basic store of query -- doesn't work with row counting

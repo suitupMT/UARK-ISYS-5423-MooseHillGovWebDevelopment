@@ -19,7 +19,7 @@ session_start();
 
             <form action="include/login.inc.php" method="post">
                 <div class="v22_17">
-                    <input type="text" name="E-mail" placeholder="Email...">
+                    <input type="text" name="E-mail" placeholder="Email or Username...">
                 </div>
                 <div class="v22_18">
                 </div>

@@ -10,7 +10,7 @@ session_start();
 //connects to the database
 //pull fields from the form into php variables
 if (isset($_POST['submit'])) {
-     f "dbConnectWindowsAuth.php";
+    include "dbConnectWindowsAuth.php";
     $email = $_POST['E-mail'];
     $fname = $_POST['firstName'];
     $lname = $_POST['lastName'];
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $state = $_POST['state'];
     $zip = $_POST['zip'];
     $cc = $_POST['CC#'];
-    $cctype = $_POST['CCtype'];
+    $cctype = $_POST['ccType'];
     $cvv = $_POST['cvv'];
 
     //Need to check if email already exists;
@@ -40,16 +40,16 @@ if (isset($_POST['submit'])) {
         Redirecting to Login Page.... Please Log In. </div>';
         //echo $fname . 'Your email account already exists<br />';
         //echo 'Redirecting to Login Page.... Please Log In.';
-        header("refresh:3; url=../login.php");
+        header("refresh:3; url=../newLogin.php");
         exit();
     }
     //End of check if email exists;
 
     // Input into user table database
-    $tsql = "INSERT INTO Users(passwd, firstName, lastName, email, city, state, address)  
-    VALUES (?,?,?,?,?,?,?)";
+    $tsql = "INSERT INTO Users(passwd, firstName, lastName, email, city, state, address, username, zip)  
+    VALUES (?,?,?,?,?,?,?,?,?)";
 
-    $params = array($password, $fname, $lname, $email, $city, $state, $address);
+    $params = array($pwd, $fname, $lname, $email, $city, $state, $address, $username, $zip);
     $stmt = sqlsrv_query($conn, $tsql, $params);
     if ($stmt) {
         //echo "Row successfully inserted.\n";
@@ -69,8 +69,8 @@ if (isset($_POST['submit'])) {
 
     $userId = $inputArray[0];
     // Input into user table database
-    $tsql = "INSERT INTO PaymentInfo(userId, CCNum, CCType, CVV)  
-    VALUES (?,?,?, ?)";
+    $tsql = "INSERT INTO PaymentInfo(userId, CCNum, CCType, cvv)  
+    VALUES (?,?,?,?)";
 
     $params = array($userId, $cc, $cctype, $cvv);
     $stmt = sqlsrv_query($conn, $tsql, $params);
@@ -89,5 +89,5 @@ if (isset($_POST['submit'])) {
     echo $fname . '<div class="my-notify-success">Your Account has been Created. Redirecting to Login Page...Please Login.</br></div>';
     //echo $fname . 'Your account has been created<br />';
     //echo 'Redirecting to Login Page.... Please Log In.';
-    header("refresh:3; url=../login.php");
+    header("refresh:3; url=../newLogin.php");
 }
