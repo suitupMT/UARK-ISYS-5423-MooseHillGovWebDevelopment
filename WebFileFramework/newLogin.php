@@ -53,7 +53,7 @@ session_start();
 
 
             <span class="v22_13">
-                <a href="signUp.php">Don’t have an account? Register<a>
+                <a href="newRegister.php">Don’t have an account? Register<a>
             </span>
             <span class="v22_14">Forgot Password?</span>
             <span class="v182_9">Your Fast and Easy way for Everything Moose!</span>
