@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,17 +20,39 @@ session_start();
         <section class="singup-form">
 
             <form action="include/login.inc.php" method="post">
-
                 <?php
-                if (!isset($_GET['E-mail'])) {
-                    $email = $_GET['E-mail'];
 
-                    echo '<div class="v22_17"><input type="text" name="E-mail" placeholder="Email or Username..."> value="' . $email . '" </div>';
-                } else {
+                //echo ("<script>console.log('check Session forms: " . $_SESSION["forms"] . "');</script>");
+                if ($_SESSION["forms"] !== "attempted") {
+                    //echo ("<script>console.log('Error var inside Post if statement: " . $error . "');</script>");
                     echo '<div class="v22_17">
                     <input type="text" name="E-mail" placeholder="Email or Username...">
-                </div>';
+                    </div>';
+                } else {
+
+                    //echo ("<script>console.log('Error var inside else if statement: " . $error . "');</script>");
+                    if ($_SESSION["error"] == "empty") {
+                        echo
+                        '<div class="v22_17" style="border: 2px solid red;">
+                        <input type="text" name="E-mail" placeholder="Value was empty..">
+                        </div>';
+                    }
+                    session_destroy();
                 }
+
+
+
+                echo '<div class="v22_24">
+                    <input type="password" name="password" placeholder="Password...">
+                </div>';
+
+                echo (')
+                <div class="v22_12">
+                    <button type="submit" name="submit">Sign In</button>
+                </div> ');
+
+
+                /*
                 if (!isset($_GET['password'])) {
                     $pwd = $_GET['password'];
                     echo '<div class="v22_24"><input type="password" name="password" placeholder="Password..."> 
@@ -39,6 +62,7 @@ session_start();
                     <input type="password" name="password" placeholder="Password...">
                 </div>';
                 }
+                */
                 ?>
 
                 <!--
@@ -55,9 +79,7 @@ session_start();
                 </div>
 
 
-                <div class="v22_12">
-                    <button type="submit" name="submit">Sign In</button>
-                </div>
+
             </form>
 
             <div class="v22_30"><input type="checkbox" class="checkbox-round"></div>
@@ -65,6 +87,11 @@ session_start();
                 Remember me
             </div>
             <div class="v22_32"></div>
+
+
+
+
+
             <!-- logo -->
             <a href="main.php" style="text-decoration:none;">
                 <div class="v180_94"></div>
@@ -77,7 +104,7 @@ session_start();
             <span class="v182_9">Your Fast and Easy way for Everything Moose!</span>
             <!--Error message validation displays -->
             <?php
-
+            /*
             if (!isset($_GET['login'])) {
                 exit();
             } else {
@@ -100,7 +127,7 @@ session_start();
                     exit();
                 }
             }
-
+                */
             ?>
 
 

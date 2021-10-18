@@ -1,26 +1,30 @@
 <?php
-/* error reporting code for testing
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-*/
+session_start();
 
 
+echo ("<script>console.log('post submit value: " . $_POST['submit'] . "');</script>");
 if (isset($_POST['submit'])) {
+    $_SESSION["forms"] = "attempted";
 
+    echo ("<script>console.log('post submit value: " . $_POST['submit'] . "');</script>");
     include "dbConnectWindowsAuth.php";
+
 
     $email = $_POST['E-mail'];
     $pwd = $_POST['password'];
 
     //Error Checking Form Entry
+    //If email empty
+    echo ("<script>console.log('Email var inside login.inc: " . $email . "');</script>");
 
-    //If password empty
     if (empty($email)) {
-        header("Location: ../newLogin.php?login=emptyEmail&password=$pwd");
+        $_SESSION["error"] = "empty";
+        echo ("<script>console.log('error var inside email if login.inc: " . $_SESSION["error"] . "');</script>");
+        header("Location: ../newLogin.php");
         exit();
+        //If password empty
     } elseif (empty($pwd)) {
-        header("Location: ../newLogin.php?login=emptyPwd&E-mail=$email");
+        //header("Location: ../newLogin.php");
         exit();
     }
 
