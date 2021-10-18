@@ -17,17 +17,20 @@ if (isset($_POST['submit'])) {
     //If email empty
     echo ("<script>console.log('Email var inside login.inc: " . $email . "');</script>");
 
-    if (empty($email)) {
-        $_SESSION["error"] = "empty";
-        echo ("<script>console.log('error var inside email if login.inc: " . $_SESSION["error"] . "');</script>");
-        header("Location: ../newLogin.php");
-        exit();
-        //If password empty
-    } elseif (empty($pwd)) {
-        //header("Location: ../newLogin.php");
-        exit();
-    }
+    if (empty($email) || empty($pwd)) {
 
+        if (empty($email)) {
+            $_SESSION["error1"] = "emptyUsername";
+        }
+
+        if (empty($pwd)) {
+            $_SESSION["error2"] = "emptyPwd";
+        }
+
+        header("Location: ../newLogin.php");
+        //exit();
+        //echo ("<script>console.log('error var inside email if login.inc: " . $_SESSION["error1"] . "');</script>");
+    }
 
 
 
@@ -51,7 +54,7 @@ if (isset($_POST['submit'])) {
         exit();
     } elseif (sqlsrv_num_rows($result) == 0) {
         //checking to see if query is empty
-        echo "incorrect email entered";
+        $_SESSION["error3"] = "Email does not exist";
 
         exit();
     } elseif ($result == true) {
@@ -73,7 +76,8 @@ if (isset($_POST['submit'])) {
     //echo $pwdCompare;
 
     if ($pwdCompare !== $pwd) {
-        header("location: ../login.php?error=wrongPassword");
+        $_SESSION["error4"] = "wrong password";
+        header("Location: ../newLogin.php");
         exit();
     } else if ($pwdCompare == $pwd) {
         session_start();
