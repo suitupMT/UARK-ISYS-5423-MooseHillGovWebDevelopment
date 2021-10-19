@@ -40,52 +40,282 @@ session_start();
 
         <section class="singup-form">
             <form action="include/newSignUp.inc.php" method="post">
+                <?php
+                //loads inital sign up screen -- nothing special
+                if ($_SESSION["forms"] != "attempted") {
+                    echo ('
                 <div class="v180_43">
                     <input type="text" name="E-mail" placeholder="Email...">
-                </div>
+                </div> ');
+                    echo ('
                 <div class="v195_42">
-                    <input type="text" name="firstName" placeholder="First Name">
-                </div>
+                    <input type="text" name="firstName" pattern="[A-Za-z]*" placeholder="First Name">
+                </div> 
+                ');
+                    echo ('
                 <div class="v201_13">
                     <input type="text" name="lastName" placeholder="Last Name">
                 </div>
+                ');
+                    echo ('
                 <div class="v195_40">
                     <input type="text" name="username" placeholder="Username">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v180_47">
-                    <input type="password" name="password" placeholder="Password* (must be at 8 -12 characters long)">
-                </div>
+                    <input type="password" name="password" placeholder="Password* (must be at least 8 characters long)">
+                </div> 
+                ');
+                    echo ('
                 <div class="v180_48">
                     <input type="password" name="confPassword" placeholder=" Confirm Password* ">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v180_44">
                     <input type="text" name="address" placeholder="Address...">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v201_4">
                     <input type="text" name="city" placeholder="City">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v195_43">
                     <input type="text" name="state" placeholder="State Abbrev.">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v195_48">
                     <input type="text" name="zip" placeholder="Zip Code">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v195_44">
                     <input type="text" name="CC#" placeholder="CC#">
-                </div>
+                </div> 
+                ');
+                    echo ('
                 <div class="v195_52">
                     <input type="text" name="ccType" placeholder="CC Type">
                 </div>
+                ');
+                    echo ('
                 <div class="v195_53">
                     <input type="text" name="cvv" placeholder="CVV">
                 </div>
+                ');
+                }
+                // -- close initial sign up form with no errors
 
-                <!-- bottom button rectangle and submit-->
+                //----------------------begin forms error checking
+
+
+                //email------------------------------------------------------------
+                //validaes proper email format--------------------------------------
+                if ($_SESSION["validate1"] == "error") {
+                    echo ('
+                <div class="v180_43" style="border: 2px solid red;">
+                    <input type="text" name="E-mail" placeholder="Enter a valid E-mail...">
+                </div> ');
+                }
+                //validates already existing email
+                if ($_SESSION["signError1"] == "error") {
+                    echo ('
+                <div class="v180_43" style="border: 2px solid red;">
+                    <input type="text" name="E-mail" placeholder="Email already existed...">
+                </div> ');
+                }
+                //validates field left empty
+                elseif ($_SESSION["emailEmpty"] == "error") {
+                    echo ('
+                <div class="v180_43" style="border: 2px solid red;">
+                    <input type="text" name="E-mail" placeholder="Email left empty...">
+                </div> ');
+                }
+                //saves value for other form error-user convenience
+                elseif ($_SESSION["emailEmpty"] == "full") {
+                    echo ('
+                <div class="v180_43">
+                    <input type="text" name="E-mail" value =' . $_SESSION["email"] . '>
+                </div> ');
+                }
+
+                //firstName-----------------------------------------------------
+                //--------------------------------------------------------------
+                if ($_SESSION["validateFname"] == "error") {
+                    echo ('
+                <div class="v195_42" style="border: 2px solid red;">
+                    <input type="text" name="firstName" placeholder="Enter a real First Name...">
+                </div> 
+                ');
+                } elseif ($_SESSION["fnameEmpty"] == "error") {
+                    echo ('
+                <div class="v195_42" style="border: 2px solid red;">
+                    <input type="text" name="firstName" placeholder="First Name left empty...">
+                </div> 
+                ');
+                } elseif ($_SESSION["fnameEmpty"] == "full") {
+                    echo ('
+                <div class="v195_42" >
+                    <input type="text" name="firstName" value = ' . $_SESSION["fname"] . '>
+                </div> 
+                ');
+                }
+                //lastName--------------------------------------------------------------
+                //-----------------------------------------------------------------------
+                if ($_SESSION["validateLname"] == "error") {
+                    echo ('
+                        <div class="v201_13" style="border: 2px solid red;">
+                            <input type="text" name="lastName" placeholder="Enter a real Last Name">
+                        </div>
+                    ');
+                } elseif ($_SESSION["lnameEmpty"] == "error") {
+                    echo ('
+                        <div class="v201_13" style="border: 2px solid red;">
+                            <input type="text" name="lastName" placeholder="Last Name left empty..">
+                        </div>
+                ');
+                } elseif ($_SESSION["lnameEmpty"] == "full") {
+                    echo ('
+                        <div class="v201_13">
+                            <input type="text" name="lastName" value = ' . $_SESSION["lname"] . '>
+                        </div>
+                ');
+                }
+                //username------------------------------------------------------------
+                //--------------------------------------------------------------------
+                if ($_SESSION["validateUsername"] == "error") {
+                    echo ('
+                         <div class="v195_40" style="border: 2px solid red;">
+                             <input type="text" name="username" placeholder="Username cannot exceed 25 characters">
+                        </div> 
+                        ');
+                } elseif ($_SESSION["usernameEmpty"] == "error") {
+                    echo ('
+                         <div class="v195_40" style="border: 2px solid red;">
+                             <input type="text" name="username" placeholder="Username left empty...">
+                        </div> 
+                        ');
+                } elseif ($_SESSION["usernameEmpty"] == "full") {
+                    echo ('
+                         <div class="v195_40">
+                             <input type="text" name="username" value = ' . $_SESSION["username"] . '>
+                        </div> 
+                        ');
+                }
+                //--------------------------------------------------------------------------
+                //Password----------------------------------
+                //-------------------------------------------
+                if ($_SESSION["validatePassword"] == "error") {
+                    echo ('
+                <div class="v180_47" style="border: 2px solid red;">
+                    <input type="password" name="password" placeholder="Password error, must be at least 8 characters long! ">
+                </div> 
+                ');
+                }
+                if ($_SESSION["passwordEmpty"] == "error") {
+                    echo ('
+                <div class="v180_47" style="border: 2px solid red;">
+                    <input type="password" name="password" placeholder="Password was left empty">
+                </div> 
+                ');
+                } else {
+                    echo ('
+                <div class="v180_47">
+                    <input type="password" name="password" placeholder="Password* (must be at least 8 characters long)">
+                </div> 
+                ');
+                }
+                //Confirm Password --------------------------------------------------------- 
+                //--------------------------------------------------------------------------
+                if (($_SESSION["compare"] == "error" && $_SESSION["passwordEmpty"] != "error")) {
+                    echo ('
+                <div class="v180_47" style="border: 2px solid red;">
+                    <input type="password" name="password" placeholder="Two different passwords typed">
+                </div> 
+                ');
+                    echo ('
+                <div class="v180_48" style="border: 2px solid red;">
+                    <input type="password" name="confPassword" placeholder=" Confirm Password error typed">
+                </div> 
+                ');
+                } elseif ($_SESSION["confirmPasswordEmpty"] == "error") {
+                    echo ('
+                <div class="v180_48" style="border: 2px solid red;">
+                    <input type="password" name="confPassword" placeholder=" Conf. Password was left empty">
+                </div> 
+                ');
+                } else {
+                    echo ('
+                <div class="v180_48">
+                    <input type="password" name="confPassword" placeholder=" Confirm Password* ">
+                </div> 
+                ');
+                }
+                //Address ---------------------------------------------
+                //-----------------------------------------------------
+                if ($_SESSION["validateAddress"] == "error") {
+                    echo ('
+                <div class="v180_44" style="border: 2px solid red;">
+                    <input type="text" name="address" placeholder="Enter a valid Address...">
+                </div> 
+                ');
+                } elseif ($_SESSION["addressEmpty"] == "error") {
+                    echo ('
+                <div class="v180_44" style="border: 2px solid red;">
+                    <input type="text" name="address" placeholder="Address left empty...">
+                </div> 
+                ');
+                } elseif ($_SESSION["addressEmpty"] == "full") {
+                    echo ('
+                <div class="v180_44">
+                    <input type="text" name="address" value = ' . $_SESSION["address"] . '>
+                </div> 
+                ');
+                }
+
+                //City--------------------------------------------------
+                //-------------------------------------------------------
+
+                //State------------------------------------------------------
+                //---------------------------------------------------------
+
+                //Zip----------------------------------------------------
+                //-------------------------------------------------------
+
+                //CC#---------------------------------------------------
+                //-------------------------------------------------------
+
+                //CCType----------------------------------------------------
+                //-----------------------------------------------------------
+
+                //CVV-------------------------------------------
+                //----------------------------------------------
+
+
+                session_destroy();
+                ?>
                 <div class="v180_37">
                     <button type="submit" name="submit"><strong>Register</strong></button>
                 </div>
             </form>
+
+
+
+            <!-- bottom button rectangle and submit-->
+
+
+
         </section>
+
+
+
+
+
+
         <!-- Register Text for button unused
         <span class="v180_38">Register</span>
         -->
