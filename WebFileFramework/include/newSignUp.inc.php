@@ -87,34 +87,74 @@ if (isset($_POST['submit'])) {
         //address portion
         if (empty($address)) {
             $_SESSION["addressEmpty"] = "error";
-        } /*elseif (!preg_match('/[A-Za-z0-9\-\\,.]+/', $address)) {
+        } elseif (!preg_match('/[A-Za-z0-9\-\\,.]+/', $address)) {
 
             $_SESSION["validateAddress"] = "error";
-        } */ else {
+        } else {
             $_SESSION["addressEmpty"] = "full";
             $_SESSION["address"] = $address;
         }
-        /*
+        //city portion
         if (empty($city)) {
+            $_SESSION["cityEmpty"] = "error";
+        } elseif ((ctype_alpha($city) == false)) {
+            $_SESSION["validateCity"] = "error";
         } else {
+            $_SESSION["cityEmpty"] = "full";
+            $_SESSION["city"] = $city;
         }
+        //state portion
         if (empty($state)) {
+            $_SESSION["stateEmpty"] = "error";
+        } elseif ((strlen($state) > 2)) {
+
+            $_SESSION["validateState"] = "error";
         } else {
+            $_SESSION["stateEmpty"] = "full";
+            $_SESSION["state"] = $state;
         }
+        //zip portion
         if (empty($zip)) {
+            $_SESSION["zipEmpty"] = "error";
+        } elseif (!preg_match('/^[0-9]{5}(?:-[0-9]{4})?$/', $zip)) {
+            $_SESSION["validateZip"] = "error";
         } else {
+            $_SESSION["zipEmpty"] = "full";
+            $_SESSION["zip"] = $zip;
         }
+        //Credit Card portion
         if (empty($cc)) {
+            $_SESSION["ccEmpty"] = "error";
+        } elseif (!preg_match('/^[0-9]{16}(?:-[0-9]{4})?$/', $cc)) {
+
+            $_SESSION["validateCc"] = "error";
         } else {
+            $_SESSION["ccEmpty"] = "full";
+            $_SESSION["cc"] = $cc;
         }
+        //cc type portion
         if (empty($cctype)) {
+            $_SESSION["cctypeEmpty"] = "error";
+        } elseif (ctype_alpha($cctype) == false || (strlen($cctype) != 2)) {
+
+            $_SESSION["validateCctype"] = "error";
         } else {
+            $_SESSION["cctypeEmpty"] = "full";
+            $_SESSION["cctype"] = $cctype;
         }
+        //cvv portion
         if (empty($cvv)) {
+            $_SESSION["cvvEmpty"] = "error";
+        } elseif (!preg_match('/^[0-9]{3}$/', $cvv)) {
+
+            $_SESSION["validateCvv"] = "error";
         } else {
+            $_SESSION["cvvEmpty"] = "full";
+            $_SESSION["cvv"] = $cvv;
         }
-        */
+        //direction back to page if any errors
         header("Location: ../newRegister.php");
+        //breaks before sql code can be submitted
         exit();
     } //end of empty
 

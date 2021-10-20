@@ -94,12 +94,12 @@ session_start();
                 ');
                     echo ('
                 <div class="v195_44">
-                    <input type="text" name="CC#" placeholder="CC#">
+                    <input type="text" name="CC#" placeholder="CC# no spaces">
                 </div> 
                 ');
                     echo ('
                 <div class="v195_52">
-                    <input type="text" name="ccType" placeholder="CC Type">
+                    <input type="text" name="ccType" placeholder="CC Type ex: MC, VS">
                 </div>
                 ');
                     echo ('
@@ -139,7 +139,7 @@ session_start();
                 elseif ($_SESSION["emailEmpty"] == "full") {
                     echo ('
                 <div class="v180_43">
-                    <input type="text" name="E-mail" value =' . $_SESSION["email"] . '>
+                    <input type="text" name="E-mail" value ="' . $_SESSION["email"] . '">
                 </div> ');
                 }
 
@@ -160,7 +160,7 @@ session_start();
                 } elseif ($_SESSION["fnameEmpty"] == "full") {
                     echo ('
                 <div class="v195_42" >
-                    <input type="text" name="firstName" value = ' . $_SESSION["fname"] . '>
+                    <input type="text" name="firstName" value = "' . $_SESSION["fname"] . '">
                 </div> 
                 ');
                 }
@@ -181,7 +181,7 @@ session_start();
                 } elseif ($_SESSION["lnameEmpty"] == "full") {
                     echo ('
                         <div class="v201_13">
-                            <input type="text" name="lastName" value = ' . $_SESSION["lname"] . '>
+                            <input type="text" name="lastName" value = "' . $_SESSION["lname"] . '">
                         </div>
                 ');
                 }
@@ -202,7 +202,7 @@ session_start();
                 } elseif ($_SESSION["usernameEmpty"] == "full") {
                     echo ('
                          <div class="v195_40">
-                             <input type="text" name="username" value = ' . $_SESSION["username"] . '>
+                             <input type="text" name="username" value = "' . $_SESSION["username"] . '">
                         </div> 
                         ');
                 }
@@ -272,29 +272,135 @@ session_start();
                 } elseif ($_SESSION["addressEmpty"] == "full") {
                     echo ('
                 <div class="v180_44">
-                    <input type="text" name="address" value = ' . $_SESSION["address"] . '>
+                    <input type="text" name="address" value = "' . $_SESSION["address"] . '">
+                </div> 
+                ');
+                    //  echo ("<script>console.log('error var inside session address: " . $_SESSION["address"] . "');</script>");
+                }
+                //City--------------------------------------------------
+                //-------------------------------------------------------
+                if ($_SESSION["validateCity"] == "error") {
+                    echo ('
+                <div class="v201_4" style="border: 2px solid red;">
+                    <input type="text" name="city" placeholder="Enter a valid City name">
+                </div> 
+                ');
+                } elseif ($_SESSION["cityEmpty"] == "error") {
+                    echo ('
+                <div class="v201_4" style="border: 2px solid red;">
+                    <input type="text" name="city" placeholder="City was left empty">
+                </div> 
+                ');
+                } elseif ($_SESSION["cityEmpty"] == "full") {
+                    echo ('
+                <div class="v201_4">
+                    <input type="text" name="city" value = "' . $_SESSION["city"] . '">
+                </div> 
+                ');
+                }
+                //State------------------------------------------------------
+                //---------------------------------------------------------
+                if ($_SESSION["validateState"] == "error") {
+                    echo ('
+                <div class="v195_43" style="border: 2px solid red;">
+                    <input type="text" name="state" placeholder="State Abbrev. are two letters">
+                </div> 
+                ');
+                } elseif ($_SESSION["stateEmpty"] == "error") {
+                    echo ('
+                <div class="v195_43" style="border: 2px solid red;">
+                    <input type="text" name="state" placeholder="State Abbrev. was left empty">
+                </div> 
+                ');
+                } elseif ($_SESSION["stateEmpty"] == "full") {
+                    echo ('
+                <div class="v195_43">
+                    <input type="text" name="state" value = "' . $_SESSION["state"] . '">
+                </div> 
+                ');
+                }
+                //Zip----------------------------------------------------
+                //-------------------------------------------------------
+                if ($_SESSION["validateZip"] == "error") {
+                    echo ('
+                <div class="v195_48" style="border: 2px solid red;">
+                    <input type="text" name="zip" placeholder="Enter a valid Zip Code">
+                </div> 
+                ');
+                } elseif ($_SESSION["zipEmpty"] == "error") {
+                    echo ('
+                <div class="v195_48" style="border: 2px solid red;">
+                    <input type="text" name="zip" placeholder="Zip Code was left empty">
+                </div> 
+                ');
+                } elseif ($_SESSION["zipEmpty"] == "full") {
+                    echo ('
+                <div class="v195_48">
+                    <input type="text" name="zip" value = "' . $_SESSION["zip"] . '">
                 </div> 
                 ');
                 }
 
-                //City--------------------------------------------------
-                //-------------------------------------------------------
-
-                //State------------------------------------------------------
-                //---------------------------------------------------------
-
-                //Zip----------------------------------------------------
-                //-------------------------------------------------------
-
                 //CC#---------------------------------------------------
                 //-------------------------------------------------------
+                if ($_SESSION["validateCc"] == "error") {
+                    echo ('
+                <div class="v195_44" style="border: 2px solid red;">
+                    <input type="text" name="CC#" placeholder="CC# has 16 digits no spaces">
+                </div> 
+                ');
+                } elseif ($_SESSION["ccEmpty"] == "error") {
+                    echo ('
+                <div class="v195_44" style="border: 2px solid red;">
+                    <input type="text" name="CC#" placeholder="CC# was left empty">
+                </div> 
+                ');
+                } elseif ($_SESSION["ccEmpty"] == "full") {
+                    echo ('
+                <div class="v195_44">
+                    <input type="text" name="CC#" value = "' . $_SESSION["cc"] . '">
+                </div> 
+                ');
+                }
 
                 //CCType----------------------------------------------------
                 //-----------------------------------------------------------
+                if ($_SESSION["validateCctype"] == "error") {
+                    echo ('
+                <div class="v195_52" style="border: 2px solid red;">
+                    <input type="text" name="ccType" placeholder="CC Type ex: MC,AX,VS">
+                </div>
+                ');
+                } elseif ($_SESSION["cctypeEmpty"] == "error") {
+                    echo ('
+                <div class="v195_52" style="border: 2px solid red;">
+                    <input type="text" name="ccType" placeholder="CC Type was left empty">
+                </div>
+                ');
+                } elseif ($_SESSION["cctypeEmpty"] == "full") {
+                    echo ('
+                <div class="v195_52">
+                    <input type="text" name="ccType" value = "' . $_SESSION["cctype"] . '">
+                </div>
+                ');
+                }
 
                 //CVV-------------------------------------------
                 //----------------------------------------------
-
+                if ($_SESSION["validateCvv"] == "error") {
+                    echo ('
+                <div class="v195_53" style="border: 2px solid red;">
+                    <input type="text" name="cvv" placeholder="CVV is 3 digit code">
+                </div>
+                ');
+                } elseif ($_SESSION["cvvEmpty"] == "error") {
+                    echo ('
+                <div class="v195_53" style="border: 2px solid red;">
+                    <input type="text" name="cvv" placeholder="CVV was empty">
+                </div>
+                ');
+                }
+                //no full display variable -- security number -- no form save
 
                 session_destroy();
                 ?>
