@@ -125,7 +125,7 @@ session_start();
                 if ($_SESSION["signError1"] == "error") {
                     echo ('
                 <div class="v180_43" style="border: 2px solid red;">
-                    <input type="text" name="E-mail" placeholder="Email already existed...">
+                    <input type="text" name="E-mail" placeholder="Email already exists with an account...">
                 </div> ');
                 }
                 //validates field left empty

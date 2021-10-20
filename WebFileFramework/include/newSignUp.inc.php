@@ -176,6 +176,7 @@ if (isset($_POST['submit'])) {
         //echo 'Redirecting to Login Page.... Please Log In.';
         //header("refresh:3; url=../newLogin.php");
         header("Location: ../newRegister.php");
+        $_SESSION["forms"] = "reset";
         exit();
     }
 
