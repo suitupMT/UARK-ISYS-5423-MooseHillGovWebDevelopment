@@ -18,7 +18,9 @@ echo ('
                 <span class="v211_6">You have successfully logged out. </span>
                 <span class="v211_7">You will be redirected to the City main page soon. </span>
             </div>
-
+            
+            <div class="loader"></div>
+           
 ');
 //echo "Thank you for being a part of MooseLanding!</br>";
 //echo "You are successfully logged out. Redirecting you to the Main City Page</br>";
