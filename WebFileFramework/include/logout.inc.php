@@ -24,5 +24,5 @@ echo ('
 ');
 //echo "Thank you for being a part of MooseLanding!</br>";
 //echo "You are successfully logged out. Redirecting you to the Main City Page</br>";
-header("refresh:4 url= ../main.php"); //to redirect back to "index.php" after logging out
+header("refresh:4 url= ../index.php"); //to redirect back to "index.php" after logging out
 exit();

@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
         $_SESSION["CCType"] = $queryArray[11];
 
 
-        header("location: ../main.php");
+        header("location: ../index.php");
         exit();
     }
 }

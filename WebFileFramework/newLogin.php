@@ -71,7 +71,7 @@ session_start();
             <div class="v22_32"></div>
 
             <!-- logo -->
-            <a href="main.php" style="text-decoration:none;">
+            <a href="index.php" style="text-decoration:none;">
                 <div class="v180_94"></div>
             </a>
 

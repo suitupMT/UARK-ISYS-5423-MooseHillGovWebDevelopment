@@ -71,13 +71,13 @@ function loginUser($conn, $email, $pwd)
         $_Session["email"] = $emailExists["email"];
         $_Session["fName"] = $emailExists["firstName"];
         $_Session["lName"] = $emailExists["lastName"];
-        header("locaiton: ../main.php");
+        header("locaiton: ../index.php");
         exit();
     }
     //testing code
     function changeSession()
     {
         $_SESSION["initial"] = "changed";
-        header("location: ..main.php");
+        header("location: ..index.php");
     }
 }

@@ -29,7 +29,7 @@ session_start();
 <body>
     <div class="v195_4">
         <div class="v195_5"></div>
-        <a href="main.php" style="text-decoration:none;">
+        <a href="index.php" style="text-decoration:none;">
             <div class="v195_19"></div>
         </a>
 
