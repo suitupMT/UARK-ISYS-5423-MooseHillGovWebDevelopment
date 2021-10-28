@@ -224,8 +224,8 @@ if (isset($_POST['submit'])) {
     sqlsrv_close($conn);
 
     //change redirect statement here!!!!
-    echo $fname . '<div class="my-notify-success">Your Account has been Created. Redirecting to Login Page...Please Login.</br></div>';
+    //echo $fname . '<div class="my-notify-success">Your Account has been Created. Redirecting to Login ///Page...Please Login.</br></div>';
     //echo $fname . 'Your account has been created<br />';
     //echo 'Redirecting to Login Page.... Please Log In.';
-    header("refresh:3; url=../newLogin.php");
+    header("location: signUpRedirect.php");
 }
