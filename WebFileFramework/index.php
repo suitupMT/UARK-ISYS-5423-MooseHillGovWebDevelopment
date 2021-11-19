@@ -30,7 +30,7 @@ $_SESSION['initial'];
             <div class="dropdown">
                 <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="#"><strong>Parks and Recreation</strong></a>
+                    <a href="https://www.figma.com/proto/EbNdGzO5W83HSjXzOvuWDr/Moose-Hide-Landing?page-id=130%3A5&node-id=318%3A38&viewport=241%2C48%2C0.24&scaling=min-zoom&starting-point-node-id=130%3A6"><strong>Parks and Recreation</strong></a>
                     <a href="transport_landing.html"><strong>Transportation</strong></a>
                     <a href="#"><strong>Recycling</strong></a>
                     <a href="#"><strong>Airport Info</strong></a>
@@ -44,7 +44,7 @@ $_SESSION['initial'];
                 <div class="dropdown-content">
                     <a href="citycouncil.html"><strong>City Council</strong></a>
                     <a href="#"><strong>Police Dept</strong></a>
-                    <a href="#"><strong>Permit Info</strong></a>
+                    <a href="https://www.figma.com/proto/rt3KXm3MWF0M3i9WIWbuAd/Permit-Page?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2"><strong>Permit Info</strong></a>
                 </div>
             </div>
         </span>
@@ -78,7 +78,7 @@ $_SESSION['initial'];
                     echo '<div class="dropdown">
                 <button class="dropbtn3">Account</button>
                 <div class="dropdown-content">
-                    <a href="Profile.php"><strong>Profile</strong></a>
+                    <a href="user_profile.html"><strong>Profile</strong></a>
                     <a href="include/logout.inc.php"><strong>Log Out</strong></a>
                 </div>
             </div>';
