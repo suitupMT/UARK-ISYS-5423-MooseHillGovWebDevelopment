@@ -43,7 +43,7 @@ $_SESSION['initial'];
                 <button class="dropbtn">Government</button>
                 <div class="dropdown-content">
                     <a href="citycouncil.html"><strong>City Council</strong></a>
-                    <a href="#"><strong>Police Dept</strong></a>
+                    <a href="https://www.figma.com/proto/ZUkOwzLrfBNLxyOk0EmwVH/Police-Department?scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A2&node-id=2%3A2"><strong>Police Dept</strong></a>
                     <a href="https://www.figma.com/proto/rt3KXm3MWF0M3i9WIWbuAd/Permit-Page?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2"><strong>Permit Info</strong></a>
                 </div>
             </div>
