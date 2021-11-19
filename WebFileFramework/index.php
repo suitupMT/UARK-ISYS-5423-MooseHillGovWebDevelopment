@@ -78,7 +78,7 @@ $_SESSION['initial'];
                     echo '<div class="dropdown">
                 <button class="dropbtn3">Account</button>
                 <div class="dropdown-content">
-                    <a href="Profile.php"><strong>Profile</strong></a>
+                    <a href="user_profile.html"><strong>Profile</strong></a>
                     <a href="include/logout.inc.php"><strong>Log Out</strong></a>
                 </div>
             </div>';
