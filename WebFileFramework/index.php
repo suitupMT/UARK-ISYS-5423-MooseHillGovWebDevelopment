@@ -24,7 +24,7 @@ $_SESSION['initial'];
         <div class="v118_7"></div>
         <!-- bottom text -->
         <span class="v119_3">The Town of</span>
-        <span class="v119_4">Your Dreams</span>
+        <span class="v119_4">Look at this new stuff here</span>
         <!--BEGIN DROP DOWN BUTTON OBJECTS!! -->
         <span class="v123_2">
             <div class="dropdown">
